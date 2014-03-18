@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>skiddiks teaches you to time</title>
+<link rel="stylesheet" type="text/css" href="../internal/main.css" />
+</head>
+
+<body>
+<div id="body">
+<h1 class="title">BASIC TIMING SHIT</h1>
+<p>
+This is just the meat and potatoes of timing. Actually read <a href="http://unanimated.github.io/timing-basics.htm">the shit</a> in the topic first. You'll most likely be terrible otherwise. This is just to reinforce the more important things.</p>
+
+<p>1. Do these first:
+<a href="http://unanimated.github.io/scxvid.htm">ALWAYS MAKE KEY FRAME FILES. CAUSE SHIT WILL BE FUCKED IF YOU DON'T.</a>
+HAVE THE DEFAULT DIALOG STYLE FONT INSTALLED. IF YOU DON'T YOU MAY HAVE THREE-LINERS YOU ARE UNAWARE OF.</p>
+
+<p>2. Press Alt+O and do this: <div class="image"><img src="http://unanimated.github.io/px/audiosett3.png" /></div>
+
+Save the .ass you're doing then close and re-open aegis and make sure it actually saved the setting cause sometimes it doesn't for whatever reason (at least for me).</p>
+
+<p>4. Enable spectrum. It's the last one of these buttons: <div class="image"><img src="http://puu.sh/7zM2B.png"  /></div>
+
+A lot of people believe waveform is better. I, too, once thought that until I forced myself to use spectrum. Trust me, it may seem weird at first, but you can find voices much better with it once you get used to it, especially quieter ones or voices against background noise. The bars to the right of the audio spectrum change the intensity and vertical length of the spectrum. experiment to find what's right for you. Feel free to look at what I have in my screenshots and go with that if you want.</p>
+ 
+<p>3. Exact time your line like this: <div class="image"><img src="http://puu.sh/7zLZz.png" /></div>
+Then press 'c' and 'v'. those add your lead-in and lead-out, respectively. <div class="image"><img src="http://puu.sh/7zMcp.png" /></div></p>
+
+
+<p>5. Decide if the line needs to do the following:
+<ul>
+<li>snapped to keyframes (in this case, no)</li>
+<li>made continuous with other lines (yes)</li></ul></p>
+
+<p>Let's look at the spectrum again:
+<div class="image"><img src="http://puu.sh/7zMkr.png" /></div></p>
+
+<p>As you can see, the next line is pretty close to the current one. So we're gonna need to make them continuous (lines don't have any gap). We're gonna add more lead-out—enough to cover the gap. 
+<div class="image"><img src="http://puu.sh/7zMoL.png" /></div></p>
+
+<p>After covering the gap, I suggest pressing 'd'. This will play the last 100ms or so of the line. If you can hear the next line, you added a bit too much lead-out.</p>
+
+<p>Now we press 'g' which commits changes and moves to the nest line. Personally, I set 'h' to commit and move and 'g' to commit only. Cause sometimes I don't want to move to the next line. Maybe that's just me, though...</p>
+
+<p>If you're not sure about the gap, time it naturally then time the next line.
+<div class="image"><img src="http://puu.sh/7zMCi.png" /></div></p>
+
+<p>The gap will be different different on how wide you made your spectrum in step 3. Once you get used to it, you will be able to tell if you need to make lines continuous or not. In this case, this is obviously close enough to make continuous. If you're still not sure, look at the times. First line ends at 0:21:20.84 and the next one starts at 0:21:21.09. Without doing any math, you should be able to tell these are 200ms apart. Anything under 300ms should be joined. Anything under 400ms should probably be joined too. 500 is subjective. Anything more should not be joined.</p>
+
+<p>There are two ways to make the lines continuous. Either:
+a) ctrl-click both lines > make lines continuous. You have two options. Change Start will make the second line start at the end of the first. We don't want this right now, since that would give us too much leadin. Do the former, which makes the first line end directly before the next line starts</p>
+
+b)click the first line, or press 'z' (z and x move to the previous and next lines respectively without committing changes). Click the end of the first line and drag it to the end of the second. Aegisub should snap it automatically.
+<div class="image"><img src="http://puu.sh/7zN2o.png" /></div>
+Yay.</p>
+
+I'll go into depth about continuous lines later.
+Now do this 250-500 more times.</p>
+
+<h2>OTHER THINGS TO DO AND NOT TO DO.</h2>
+
+<h3>HOW TO SNAP KEYFRAMES</h3>
+<p>See those purple lines in the audio? If you actually read the timing guide, you'd know those are keyframes. Basically, it's when a scene changes. Key frame snapping is when you time a line to start/end at the same time as a keyframe. If your subs are still up after a scene change, you do something called a scene bleed. These are very, very bad. don't do these.</p>
+
+<h3>WHEN TO SNAP TO A KEYFRAME AT THE END OF A LINE</h3>
+<p><div class="image"><img src="http://puu.sh/7zNhU.png" /></div>
+Normally, you'd add in more lead-in, but that would cause a bleed. If you drag the end time to a keyframe, it will automatically be snapped to it. If you want to double check, for whatever reason hit the third from last button here: <div class="image"><img src="http://puu.sh/7zNlA.png" /></div>
+This button will go to the end of a line. Now click where the video is. If you press left and right, you'll framestep the video. Framestep one to the right. Scene should change on the video if it's timed correctly. The button before it will move to the beginning of a line. The next to buttons will set the start or end times to the current video frame respectively.</p>
+
+<h3>OMG! THERE'S A GAP BETWEEN THE KEYFRAME AND END TIME!</h3>
+<p>First, time it like you normally would, including lead-out. If you're <400ms from the keyframe, you're probably safe to snap. If it's more than that, use your best judgment. When all else fails, do it then see how it looks. Does it look awkward to have the subs stay up a long time? Does it look awkward if the subs end before the scene change? Do whatever you think is best.</p>
+
+<h3>WTF THERE'S LIKE 9001 SCENE CHANGES!</h3>
+<p><div class="image"><img src="http://puu.sh/7zNLJ.png" /></div>
+This happens during heavy action scenes or fades. Find where the keyframe legitmately ends and time it to that. In this case, the first kf since that's where the scene actually changes.</p>
+
+<h3>WHEN DO I NOT SNAP?</h3>
+<p>For fake keyframes. Those are similar to the above. For example, you may get a keyframe for something like a head tilt. You should time those normally. Once you get used to timing, you'll actually notice whether a keyframe is fake or not. When in doubt though, always check the video.</p>
+
+<h3>WHEN DO I SNAP TO THE BEGINNING OF A LINE?</h3>
+<p>Like the last part, but you generally don't want to have too much lead-in. I'd say adding no more than an additional 250ms.
+<div class="image"><img src="http://puu.sh/7zO3e.png" /></div>
+</p>
+
+<p>This is a good example. It can be either snapped or not snapped. Personally, I'd snap it so it's continuous with the previous line. If you're not sure if you're adding too much lead-in, watch the video. Is there a noticeable silence before they start timing? If so, you probably have too much.</p>
+
+<h3>HOLY TITS, THERE'S DIALOGUE AT THE END OF A KEYFRAME! SHOULD I SNAP OR NOT?</h3>
+<p>Snap when:
+-The dialogue is the last syllable/word of the line
+-It's under 400ms
+
+Don't snap when:
+-It's over 500ms
+
+Panic when:
+-it's between 400-500ms
+-there's sorta of a few words after it
+
+Generally, you want snap when you panic.</p>
+
+<h3>YOU SAID YOU'D TALK MORE ABOUT CONTINUOUS LINES!</h3>
+
+<p>As I said earlier, continuous lines are lines with no gaps. Lines should be continuous if there is a gap <400ms between them. The exception is when they are separated by a keyframe, like this: <div class="image"><img src="http://puu.sh/7zOaO.png" /></div>
+These should not be continuous since there is a scene change between.
+
+HOW DO I BALANCE CONTINUOUS LINES? 
+I'd say about 7/3 or 8/2 (first line lead-out/second line lead-in). <br />
+Good: <div class="image"><img src="http://puu.sh/7zOfI.png" /></div>
+
+Too much lead-out: <div class="image"><img src="http://puu.sh/7zOgB.png" /></div>
+
+Too much lead-in: <div class="image"><img src="http://puu.sh/7zOhu.png" /></div>
+</p>
+
+
+<h3>WHAT IF THEY ARE TALKING AT THE SAME TIME?</h3>
+<p>Two things you can do:
+<ul><li>{\an8} is the aegisub tag that moves subs to the top of the screen. Put background dialog up here. If it's over multiple lines, keep it consistent. For example, if it's a teacher talking in the background, make all of his lines \an8 and all the main dialog on the bottom.</li>
+
+<li>Alternate style is making a copy of the current style, but with a different outline. The alt style should be on top of the main dialog.. The first line will be on the bottom, the next line will be on the top. Like this: <div class="image"><img src="http://puu.sh/7zOPu.png" /></div>
+</li>
+You generally use an alternate style for people saying  the same/similar things at the same time. When in doubt, just use \an8.</ul></p>
+
+<h2>ARE THERE ANY EXCEPTIONS TO THE RULES? ANY ADDITIONAL ONES?</h2>
+Of course. I'm probably forgetting a lot of things. Here are some other random things:
+
+<ul><li>Make all lines at least .5 seconds long. In my opinion, .65 seconds.</li><li>Add in a more generous lead-in if necessary—including for continuous lines.</li>
+<li>????</li>
+<li>I'll think of more later... probably.</li>
+<li>See Also: <a href="skiddiks_pls.html">Believe it or not, timers have duties other than timing.</a></li>
+</p>
+</div>
+</body>
+
+</html>

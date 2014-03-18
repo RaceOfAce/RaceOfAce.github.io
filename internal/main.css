@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Vollkorn Regular'), local('Vollkorn-Regular'), url(http://themes.googleusercontent.com/static/fonts/vollkorn/v4/BCFBp4rt5gxxFrX6F12DKvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu'), url(http://themes.googleusercontent.com/static/fonts/ubuntu/v5/_xyN3apAT_yRRDeqB3sPRg.woff) format('woff');
+}
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Alegreya'), local('Alegreya-Regular'), url(http://themes.googleusercontent.com/static/fonts/alegreya/v5/MYFQxfgoxFvFirdbdLj3M_esZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+body {
+    background-color: #000000;
+    color: #aad4e5;
+    font-family: Helvetica, Verdana, Arial;
+    text-align: justify;
+}
+h1,h2,h3 {
+    text-align: center;
+    font-family: 'Ubuntu';
+    text-decoration:underline;
+}
+
+#body {
+    width: 65%;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image {
+    text-align: center;
+}
+
+img {
+   max-height: 100%;
+   max-width: 100%;   
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>skiddiks teaches you to time</title>
+<link rel="stylesheet" type="text/css" href="../internal/main.css" />
+</head>
+
+<body>
+<div id="body">
+<p>
+<h2>Believe it or not, timers have duties other than timing.</h2>
+
+<p>
+You'll need to do the following: 
+<ul>
+<li>select the default styling for a show when it starts airing</li>
+<li>unfuck CR Styles</li>
+<li>time signs</li>
+<li>style songs</li>
+<li>shift the OP/ED every episode</li>
+<li>make chapter files (sometimes)</li>
+</ul>
+</p>
+
+
+<h3>HOW TO MAKE A DEFAULT STYLE</h3>
+<div class="image"><img src="http://puu.sh/7zPG0.png" /></div>
+<p>TL Note: Commie Sans is the same as LT Finnegan Medium. There's a 90% chance one of them is in a show's font folder on the staff FTP. Alternatively, you can demux it from one of our releases. Make sure you get the italics version as well.
+If you know what you're doing, feel free to change it&#x2012; LTFinnegan isn't the best font for anything. Other good fonts are PT Sans, Clubtype Mercurius, and Montara Gothic. If you want to use one of these, find a show that used them and copy it's styling. Off the top of my head, you can find PT Sans in Kokoro Connect or Wake Up, Girls!, Clubtype Mercurius in Nisekoi and Montara Gothic in Monogatari. If you want to change the outline color, make it something dark. Also, in case you didn't know, you can store styles in Aegisub. In the style manager, hit the "new" button at the top. Name your new storage something useful, like the name of the show. Then export all the styles you'll use every week (Default, OP, ED) to the catalog. You can then easily import them all next week.</p>
+
+<h3>HOW TO UNFUCK CR STYLES</h3>
+<p>Sometimes, CR uses 9001 styles for a sign. It's dumb. Unclutter that shit if the editor already hasn't. Here's how I do it:
+<ol> 
+<li>Subtitle > Sort All Lines > Style Name</li>
+<li>Change all of the "Main" (dialog) fonts to default. The editor should have put in italics for all of the italics fonts. If they didn't, tell them to do so in the future cause it's their job to do so, not yours. The only exception to this is if they didn't italicize flashback dialogue. If it's internal dialogue, though, it should be italicized. If they didn't, use the add tags script and \i1 to the lines that need it. You can find the script in the song styling section (too lazy to c/p it back here).</li>
+<li>Everything else should be a sign style. Copy the Default font and name the new copied style "signs". Then ctrl/shift-click the lines that are signs and change them to the signs style. You should now be able to delete all styles other than Default and signs.</li></ol></p>
+
+<h3>HOW TO TIME SIGNS</h3>
+<p>This is easy. Find the first frame the sign appears and time it to the last time it's on screen. Then change the sign to a comment (tick the thing in the top right corner http://puu.sh/7zRN8.png). </p>
+
+<h3>HOW TO STYLE SONGS</h3>
+<p>If you really don't want to do this for whatever reason or if you think someone can do a better job than you, ask someone in the staff channel to do it for you. If you want to give it a shot, follow these steps. First thing you want to do is choose the font. When all else fails, I have my go-to fonts which are Amienne, Arkona, Prototype, Raleigh, and Blue Highway. Those cover many kinds of songs. Amienne is good for pretty much everything that isn't a super upbeat song. Arkona is used similarly. Prototype has a futuristic look, so it goes well with faster, high tempo songs. Blue Highway is good for upbeat songs. There are plenty of other good ones that work in many situations as well. Some of my personal favorites are Caesar, BlackChancery, ResPublica, and CAC Moose. If it's not being used as the default style, Clubtype Mercurius is pretty good, too. Pay attention to the fonts used in other releases and build up your font library.</p>
+
+<p>If none of those look good, you can try matching the credits. Sometimes the credits have english words. Find a similar looking font and go with that. If you can't find one, ask somebody for a suggestion.</p>
+
+<p>Once you got your font of choice, you'll need to style it. For openings and endings, you'll want your font size to be pretty big, but not obnoxious. Just see how it looks in action and adjust accordingly. Once you have a decent size, adjust the border and shadow. Just mess around until you find something you like. If you're not sure, find a release that uses the font you picked and see how it was styled there. Generally, you want a border between 2-3 and a very small shadow, if any shadow at all. Once you have that down, you'll need to choose a default position. Anything that isn't \an4, \an5, or \an6 is good. I usually go with 3 or 9. next up is margins. I usually put a horizontal margin of 20 or 25. Vertical depends on credit placement. You should avoid having the lyrics overlap the dialogue whenever possible. I start at 35 then move it down if necessary. Finally, choose a good color for the border. Find a color that looks nice throughout the duration of the song. Using the color picker helps. </p>
+
+<p>Next part is actually styling the songs. If you're lazy, just put in these tags: {\blur2\fad(200,200)}. You can adjust those values to whatever you'd like. The easiest way to do this is using the following aegisub script: skiddiks pls
+If you don't know how to install scripts, just save them in \Aegisub\automation\autoload. Clicking "Automation" will open your list of scripts. I use Add Tags a lot, so I have it hot-keyed to ctrl-t.</p>
+
+<p>If you want to go further, you can change the color of the outline to match the current scene. I'm not going to go into detail how to do that here. Read the aegisub manual and learn more about ass tags there. Particularly \t and, of course, the color tags. If you're copying the credits, do your best to... well, copy the credits. This may require some knowledge of ass tags, depending on what you need to do.</p>
+
+<h3>HOW TO SHIFT THE OP</h3>
+<p>This is already well-documented in <a href="http://unanimated.github.io/timing-notes.htm">unanimated's timing guide</a>. Go read how to do it there.</p>
+
+<h3>HOW TO MAKE CHAPTERS</h3>
+<p>Usually, the chapters will already be made for you cause herkz is a cool guy. You'll need to make them though if CR is the video source or RHE encodes the show (this is extremely rare).
+Install <a href="https://www.dropbox.com/s/xnmwduzqzbbwdso/make_chapters.lua">this lua script</a>. 
+<br />If you can't figure it out, here's what you need to do:
+<ol>
+<li>Time a blank line to where you want your chapter to start</li>
+<li>Put "chapter" in the actor field</li>
+<li>Put the chapter name as a comment in the editbox (e.g. {OP} )
+    Generally, the chapters you'll have will be Intro, OP, Part A, Part B, ED, and Preview. Intro is automatically generated by the script unless you untick the option to do so in the script. OP will be the first frame of the opening. Part A will be the first frame after the OP. Part B is bit tricky. It's about the halfway point in the episode. It's where the commercial break would be on TV. If you're lucky, your show will have an eyecatch. Part B will be the start of the eyecatch in that case. If you don't have one, you'll need to find where Part B starts on your own. Generally, Part A ends on a climatic scene or the end of one. The last frame will usually be a freeze frame for a second. It's really hard to explain, but it's pretty easy to spot if you're looking for it. ED will be the ending (shocker, right?). Sometimes there'll be a short part after the ED that isn't a preview. Name this {Part C}. Finally, name the preview {Preview}. Sometimes, the show will have an end card. if it does, guess what? Make a chapter called {Endcard}.</li>
+<li>Once you're done making your chapters, run the script. DOUBLE CHECK TO MAKE SURE ALL OF YOUR CHAPTERS ARE THERE. It'll be a wall of text, but it's not that hard to find things. Make sure you see a &lt;ChapterString&gt;OP&lt;/ChapterString&gt; for all of your chapter names. If something is missing, you might have typo'd chapter. I'm only stressing this since I've made this error a couple of times myself.</li></ol></p>
+</div>
+</body>
+
+</html>
